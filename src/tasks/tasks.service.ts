@@ -1,12 +1,13 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { Task, TaskStatus } from "./tasks.model";
-import { v4 as uuid } from 'uuid';
+import { TaskStatus } from "./task-status.enum";
 import { CreateTaskDto } from "./dto/create-teask.dto";
 import { GetTasksFilterDto } from "./dto/get-tasks-filter.dto";
 import { NotFoundError } from "rxjs";
 
 @Injectable()
 export class TasksService {
+
+    /* 
     getTasksWithFilters(filterDto: GetTasksFilterDto): Task[] {
         const { status, search } = filterDto;
         let tasks = this.getAllTasks();
@@ -25,7 +26,6 @@ export class TasksService {
         return tasks;
     }
     
-    private tasks: Task[] = [];
 
     getAllTasks(): Task[] {
         return this.tasks;
@@ -67,5 +67,5 @@ export class TasksService {
         const task = this.getTaskById(id);
         task.status = status;
         return task;
-    }
+    } */
 }
