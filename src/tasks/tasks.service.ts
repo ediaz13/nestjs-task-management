@@ -7,7 +7,7 @@ import { In } from "typeorm";
 import { TaskRepository } from "./tasks.repository";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Task } from "./task.entity";
-import { User } from "src/auth/user.entity";
+import { User } from "../auth/user.entity";
 import { use } from "passport";
 
 @Injectable()
