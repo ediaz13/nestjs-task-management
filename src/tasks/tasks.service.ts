@@ -4,7 +4,7 @@ import { CreateTaskDto } from "./dto/create-teask.dto";
 import { GetTasksFilterDto } from "./dto/get-tasks-filter.dto";
 import { NotFoundError } from "rxjs";
 import { In } from "typeorm";
-import { TaskRepository } from "./task.repository";
+import { TaskRepository } from "./tasks.repository";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Task } from "./task.entity";
 
