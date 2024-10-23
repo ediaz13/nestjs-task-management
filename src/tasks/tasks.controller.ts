@@ -10,7 +10,6 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
-import { TaskStatus } from './task-status.enum';
 import { CreateTaskDto } from './dto/create-teask.dto';
 import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
 import { UpdateTaskStatusDto } from './dto/update-task-status.dto';
@@ -28,9 +27,7 @@ export class TasksController {
   constructor(
     private tasksService: TasksService,
     private configService: ConfigService,
-  ) {
-    console.log("This is a value: " + (this.configService.get('TEST_VALUE')));
-  }
+  ) {}
 
   @Get('/:id')
   getTaskById(@Param('id') id: string, @GetUser() user: User): Promise<Task> {
